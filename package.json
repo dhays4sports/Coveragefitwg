@@ -1,0 +1,17 @@
+{
+  "name": "coveragefit",
+  "version": "3.20.204",
+  "private": true,
+  "description": "CoverageFit v3.20.204 + RC-SMS-1.9.8 with shared-number product intake, callback scheduling, and Google Calendar confirmation.",
+  "scripts": {
+    "test": "node RUN_REGRESSION_SUITE.js",
+    "cloudflare:dev": "wrangler pages dev .",
+    "cloudflare:functions:build": "wrangler pages functions build --outdir=.cloudflare/functions-dist",
+    "cloudflare:discovery:deploy": "wrangler deploy --config wrangler.discovery.jsonc",
+    "cloudflare:discovery:dev": "wrangler dev --config wrangler.discovery.jsonc",
+    "test:rc-sms-1.9.8": "node --test tests/rc-sms-1.9.8.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.114.0"
+  }
+}
